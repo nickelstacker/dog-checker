@@ -454,6 +454,13 @@
     "url": "https://www.mspca.org/pets/a473249/",
     "weight_lb": null
   },
+  "mspca:a473397": {
+    "first_seen": "2026-07-03T19:49:48+00:00",
+    "name": "Cash",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473397/",
+    "weight_lb": 28.22
+  },
   "mspca:a473401": {
     "first_seen": "2026-07-03T15:23:48+00:00",
     "name": "Isle",
