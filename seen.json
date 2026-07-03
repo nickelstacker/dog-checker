@@ -62,6 +62,13 @@
     "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN1/A300389",
     "weight_lb": null
   },
+  "arlboston:A300479": {
+    "first_seen": "2026-07-03T18:11:35+00:00",
+    "name": "Cody",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN/A300479",
+    "weight_lb": null
+  },
   "mspca:a462103": {
     "first_seen": "2026-07-03T15:23:48+00:00",
     "name": "Jade",
@@ -523,6 +530,13 @@
     "source": "MSPCA",
     "url": "https://www.mspca.org/pets/a473493/",
     "weight_lb": null
+  },
+  "mspca:a473496": {
+    "first_seen": "2026-07-03T18:11:34+00:00",
+    "name": "Mr. Incredible",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473496/",
+    "weight_lb": 23.37
   },
   "mspca:a473500": {
     "first_seen": "2026-07-03T15:23:48+00:00",
