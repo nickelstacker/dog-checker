@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+_timing.py
+
+# Claude Code local settings
+.claude/
