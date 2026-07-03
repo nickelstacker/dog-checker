@@ -1,0 +1,639 @@
+{
+  "arlboston:A282786": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Greg",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN3/A282786",
+    "weight_lb": null
+  },
+  "arlboston:A299262": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Felix",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN/A299262",
+    "weight_lb": null
+  },
+  "arlboston:A299608": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Nene",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN3/A299608",
+    "weight_lb": null
+  },
+  "arlboston:A299778": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Carly",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN3/A299778",
+    "weight_lb": null
+  },
+  "arlboston:A300037": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Jello",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN/A300037",
+    "weight_lb": null
+  },
+  "arlboston:A300194": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Lucky",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN/A300194",
+    "weight_lb": null
+  },
+  "arlboston:A300297": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Bubba",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN3/A300297",
+    "weight_lb": null
+  },
+  "arlboston:A300349": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Scrappy",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN/A300349",
+    "weight_lb": null
+  },
+  "arlboston:A300389": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Prince Charming",
+    "source": "ARL Boston",
+    "url": "https://24petconnect.com/ARLBostonAdoptablePets/Details/BSTN1/A300389",
+    "weight_lb": null
+  },
+  "mspca:a462103": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Jade",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a462103/",
+    "weight_lb": null
+  },
+  "mspca:a464336": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Ace",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a464336/",
+    "weight_lb": null
+  },
+  "mspca:a465785": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Sunshine",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a465785/",
+    "weight_lb": null
+  },
+  "mspca:a465920": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Marv",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a465920/",
+    "weight_lb": null
+  },
+  "mspca:a466683": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Scooby",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a466683/",
+    "weight_lb": null
+  },
+  "mspca:a467449": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Jason",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a467449/",
+    "weight_lb": null
+  },
+  "mspca:a467452": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Marsha",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a467452/",
+    "weight_lb": null
+  },
+  "mspca:a467731": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Raven",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a467731/",
+    "weight_lb": null
+  },
+  "mspca:a467908": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Cuervo",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a467908/",
+    "weight_lb": null
+  },
+  "mspca:a467961": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Cupcake",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a467961/",
+    "weight_lb": null
+  },
+  "mspca:a468107": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Reba",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a468107/",
+    "weight_lb": null
+  },
+  "mspca:a468389": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Cady",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a468389/",
+    "weight_lb": null
+  },
+  "mspca:a468529": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Anastasia",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a468529/",
+    "weight_lb": null
+  },
+  "mspca:a468670": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Rocky",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a468670/",
+    "weight_lb": null
+  },
+  "mspca:a468902": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Coal",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a468902/",
+    "weight_lb": null
+  },
+  "mspca:a469205": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Arthur",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a469205/",
+    "weight_lb": null
+  },
+  "mspca:a470086": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Desdamona",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a470086/",
+    "weight_lb": null
+  },
+  "mspca:a470139": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Bernadette",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a470139/",
+    "weight_lb": null
+  },
+  "mspca:a470280": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Phoenix",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a470280/",
+    "weight_lb": null
+  },
+  "mspca:a470904": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Peter Pan",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a470904/",
+    "weight_lb": null
+  },
+  "mspca:a470910": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Willow",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a470910/",
+    "weight_lb": null
+  },
+  "mspca:a471099": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Trixie",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471099/",
+    "weight_lb": null
+  },
+  "mspca:a471563": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Bloopy",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471563/",
+    "weight_lb": null
+  },
+  "mspca:a471611": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Kobe",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471611/",
+    "weight_lb": null
+  },
+  "mspca:a471647": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Romeo",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471647/",
+    "weight_lb": null
+  },
+  "mspca:a471655": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Echo",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471655/",
+    "weight_lb": null
+  },
+  "mspca:a471676": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Peppy",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471676/",
+    "weight_lb": null
+  },
+  "mspca:a471927": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Annie",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a471927/",
+    "weight_lb": null
+  },
+  "mspca:a472125": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Lilly",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a472125/",
+    "weight_lb": null
+  },
+  "mspca:a472218": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Lola",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a472218/",
+    "weight_lb": null
+  },
+  "mspca:a472253": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Miloh",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a472253/",
+    "weight_lb": null
+  },
+  "mspca:a472876": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Hank",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a472876/",
+    "weight_lb": null
+  },
+  "mspca:a473003": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Dalha",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473003/",
+    "weight_lb": null
+  },
+  "mspca:a473004": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Finn",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473004/",
+    "weight_lb": null
+  },
+  "mspca:a473042": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Piper",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473042/",
+    "weight_lb": null
+  },
+  "mspca:a473044": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Quinn",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473044/",
+    "weight_lb": null
+  },
+  "mspca:a473045": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Asher",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473045/",
+    "weight_lb": null
+  },
+  "mspca:a473047": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "May May",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473047/",
+    "weight_lb": null
+  },
+  "mspca:a473048": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Petal",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473048/",
+    "weight_lb": null
+  },
+  "mspca:a473075": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Jolene",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473075/",
+    "weight_lb": null
+  },
+  "mspca:a473091": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Olive",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473091/",
+    "weight_lb": null
+  },
+  "mspca:a473105": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Callie",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473105/",
+    "weight_lb": null
+  },
+  "mspca:a473129": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Colby Jack",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473129/",
+    "weight_lb": null
+  },
+  "mspca:a473130": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Haller",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473130/",
+    "weight_lb": null
+  },
+  "mspca:a473132": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Lily 2",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473132/",
+    "weight_lb": null
+  },
+  "mspca:a473133": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Lotus",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473133/",
+    "weight_lb": null
+  },
+  "mspca:a473136": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Miles",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473136/",
+    "weight_lb": null
+  },
+  "mspca:a473145": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Adidas",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473145/",
+    "weight_lb": null
+  },
+  "mspca:a473150": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Sonny",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473150/",
+    "weight_lb": null
+  },
+  "mspca:a473206": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Rei",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473206/",
+    "weight_lb": null
+  },
+  "mspca:a473232": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Drama Queen",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473232/",
+    "weight_lb": null
+  },
+  "mspca:a473237": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Ember",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473237/",
+    "weight_lb": null
+  },
+  "mspca:a473238": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Lunabelle",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473238/",
+    "weight_lb": null
+  },
+  "mspca:a473239": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Midnight",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473239/",
+    "weight_lb": null
+  },
+  "mspca:a473249": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Bella-Marie",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473249/",
+    "weight_lb": null
+  },
+  "mspca:a473401": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Isle",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473401/",
+    "weight_lb": null
+  },
+  "mspca:a473454": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Chalky",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473454/",
+    "weight_lb": null
+  },
+  "mspca:a473459": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Peaty",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473459/",
+    "weight_lb": null
+  },
+  "mspca:a473461": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Loamy",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473461/",
+    "weight_lb": null
+  },
+  "mspca:a473463": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Nova",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473463/",
+    "weight_lb": null
+  },
+  "mspca:a473464": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Opal",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473464/",
+    "weight_lb": null
+  },
+  "mspca:a473465": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Comet",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473465/",
+    "weight_lb": null
+  },
+  "mspca:a473468": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Stella",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473468/",
+    "weight_lb": null
+  },
+  "mspca:a473470": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Vega",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473470/",
+    "weight_lb": null
+  },
+  "mspca:a473484": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Orion",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473484/",
+    "weight_lb": null
+  },
+  "mspca:a473493": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Dash",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473493/",
+    "weight_lb": null
+  },
+  "mspca:a473500": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Edna Mode",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473500/",
+    "weight_lb": null
+  },
+  "mspca:a473501": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Diane",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473501/",
+    "weight_lb": null
+  },
+  "mspca:a473506": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Roo",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473506/",
+    "weight_lb": null
+  },
+  "mspca:a473556": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Cheyenne",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473556/",
+    "weight_lb": null
+  },
+  "mspca:a473658": {
+    "first_seen": "2026-07-03T15:23:48+00:00",
+    "name": "Juice Box",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473658/",
+    "weight_lb": null
+  },
+  "worcester:60555234": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Leo",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60555234/Leo",
+    "weight_lb": 143.0
+  },
+  "worcester:60809059": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Kaylee",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60809059/Kaylee",
+    "weight_lb": 21.0
+  },
+  "worcester:60857726": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Loki",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60857726/Loki",
+    "weight_lb": 49.0
+  },
+  "worcester:60947765": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Pebbles",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60947765/Pebbles",
+    "weight_lb": 49.0
+  },
+  "worcester:60980513": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Obi",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60980513/Obi",
+    "weight_lb": 52.0
+  },
+  "worcester:60999552": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Ziggy",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp60999552/Ziggy",
+    "weight_lb": 57.0
+  },
+  "worcester:61023250": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Lucas",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp61023250/Lucas",
+    "weight_lb": 81.0
+  },
+  "worcester:61094916": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Cataleya",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp61094916/Cataleya",
+    "weight_lb": 44.0
+  },
+  "worcester:61106284": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Alfalfa",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp61106284/Alfalfa",
+    "weight_lb": 19.0
+  },
+  "worcester:61146746": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Snow Cone",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp61146746/SnowCone",
+    "weight_lb": 50.0
+  },
+  "worcester:61187555": {
+    "first_seen": "2026-07-03T15:23:49+00:00",
+    "name": "Dior",
+    "source": "Worcester ARL",
+    "url": "https://worcesterarl.org/dogs-for-adoption/pp61187555/Dior",
+    "weight_lb": 8.0
+  }
+}
