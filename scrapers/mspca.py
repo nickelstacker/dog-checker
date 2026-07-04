@@ -35,7 +35,13 @@ def _get_nonce(session: requests.Session) -> str:
     r.raise_for_status()
     m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
     if not m:
-        raise RuntimeError("MSPCA: could not find AJAX nonce on search page")
+        t = r.text.lower()
+        markers = [w for w in ("mspca_ajax", "captcha", "challenge",
+                               "cf-browser", "just a moment", "enable javascript",
+                               "access denied") if w in t]
+        raise RuntimeError(
+            f"MSPCA: no AJAX nonce (status={r.status_code}, bytes={len(r.text)}, "
+            f"server={r.headers.get('server')}, markers={markers or 'none'})")
     return m.group(1)
 
 
