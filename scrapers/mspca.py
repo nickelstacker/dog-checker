@@ -53,7 +53,10 @@ def scrape(session: requests.Session) -> list[Pet]:
     page, max_pages = 1, 1
 
     while page <= max_pages:
-        r = session.post(AJAX, timeout=TIMEOUT, data={
+        r = session.post(AJAX, timeout=TIMEOUT, headers={
+            "X-Requested-With": "XMLHttpRequest",
+            "Referer": SEARCH_PAGE,
+        }, data={
             "action": "mspca_filter_pets",
             "nonce": nonce,
             "animal": "Dog",
