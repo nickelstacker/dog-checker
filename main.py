@@ -39,6 +39,17 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _safe_notify_text(title: str, message: str) -> None:
+    try:
+        notifier.send_text(title, message)
+    except Exception as exc:
+        print(f"notify failed ({title}): {exc}", file=sys.stderr)
+
+
+def _dog_count(state: dict) -> int:
+    return sum(1 for k in state if not k.startswith("_"))
+
+
 def run(dry_run: bool = False, force_seed: bool = False) -> int:
     session = make_session()
     state = load_state()
@@ -46,16 +57,39 @@ def run(dry_run: bool = False, force_seed: bool = False) -> int:
     # a dozen notifications for dogs that were already listed.
     seeding = force_seed or not STATE_FILE.exists()
 
+    # Per-source health so a site that quietly breaks (returns 0 dogs) alerts
+    # us once, not every run. Lives under a reserved "_meta" key in the state.
+    meta = state.setdefault("_meta", {})
+    health = meta.setdefault("health", {})
+
     new_matches: list[Pet] = []
     errors: list[str] = []
 
     for mod in SCRAPERS:
+        broken = None  # reason string if this source looks broken
         try:
             pets = mod.scrape(session)
         except Exception as exc:  # one bad site shouldn't kill the others
-            errors.append(f"{mod.SOURCE}: {exc}")
-            print(f"ERROR scraping {mod.SOURCE}: {exc}", file=sys.stderr)
+            pets, broken = [], str(exc)
+        # Zero listings from a normally-busy shelter almost always means its
+        # page changed and the parser needs updating.
+        if broken is None and not pets:
+            broken = "returned 0 dogs (the site's page may have changed)"
+
+        was_broken = health.get(mod.SOURCE) == "broken"
+        if broken:
+            errors.append(f"{mod.SOURCE}: {broken}")
+            print(f"ERROR scraping {mod.SOURCE}: {broken}", file=sys.stderr)
+            if not was_broken and not dry_run:  # alert only on the transition
+                _safe_notify_text(
+                    f"⚠️ {mod.SOURCE} scraper may be broken",
+                    f"{mod.SOURCE} returned no dogs. It likely needs a fix.\n{broken}")
+            health[mod.SOURCE] = "broken"
             continue
+        if was_broken and not dry_run:  # recovered since last run
+            _safe_notify_text(f"✅ {mod.SOURCE} scraper recovered",
+                              f"{mod.SOURCE} is returning dogs again ({len(pets)} listed).")
+        health[mod.SOURCE] = "ok"
 
         print(f"{mod.SOURCE}: found {len(pets)} listed dog(s)")
         for pet in pets:
@@ -98,7 +132,7 @@ def run(dry_run: bool = False, force_seed: bool = False) -> int:
 
     verb = "would alert" if (dry_run or seeding) else "alerted"
     print(f"\nDone. {len(new_matches)} new match(es) {verb}. "
-          f"{len(state)} dog(s) tracked total.")
+          f"{_dog_count(state)} dog(s) tracked total.")
     if errors:
         print(f"{len(errors)} error(s): " + "; ".join(errors), file=sys.stderr)
     # Exit non-zero only if every scraper failed, so a single flaky site
