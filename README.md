@@ -94,5 +94,11 @@ python main.py             # real run (set NTFY_TOPIC to actually push)
   Make the repo public, or widen the interval, if that matters.
 - **ARL Boston weight** genuinely isn't in their data, so those alerts say
   "weight not listed" — glance at the breed and photo to judge size.
-- If a shelter redesigns its site, its scraper in `scrapers/` may need updating;
-  a failure in one site won't stop the others.
+- **MSPCA occasionally gets challenged.** MSPCA fronts its site with rate-based
+  bot protection that sometimes serves GitHub's shared IPs a "One moment,
+  please" page. A single run may miss MSPCA and self-heal on the next one;
+  since dogs stay listed for hours, you won't miss them. You'll only get a
+  "scraper may be broken" alert after 3 failures in a row (~1 hour).
+- **Health alerts:** if any site returns zero dogs for 3 consecutive runs
+  (a likely sign its page changed), you get one ⚠️ push, and one ✅ when it
+  recovers. A failure in one site never stops the others.
