@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "health": {
+      "ARL Boston": "ok",
+      "MSPCA": "broken",
+      "Worcester ARL": "ok"
+    }
+  },
   "arlboston:A282786": {
     "first_seen": "2026-07-03T15:23:49+00:00",
     "name": "Greg",
