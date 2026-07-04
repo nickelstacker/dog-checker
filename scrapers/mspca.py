@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import random
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -31,18 +32,29 @@ AJAX = "https://www.mspca.org/wp-admin/admin-ajax.php"
 
 
 def _get_nonce(session: requests.Session) -> str:
-    r = session.get(SEARCH_PAGE, timeout=TIMEOUT)
-    r.raise_for_status()
-    m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
-    if not m:
-        t = r.text.lower()
-        markers = [w for w in ("mspca_ajax", "captcha", "challenge",
-                               "cf-browser", "just a moment", "enable javascript",
-                               "access denied") if w in t]
-        raise RuntimeError(
-            f"MSPCA: no AJAX nonce (status={r.status_code}, bytes={len(r.text)}, "
-            f"server={r.headers.get('server')}, markers={markers or 'none'})")
-    return m.group(1)
+    """Fetch the search page and pull out the AJAX nonce.
+
+    The site runs LiteSpeed page-cache, which occasionally serves a cached
+    variant missing the localized nonce script. A cache-busting query param
+    forces a fresh render, and we retry a few times to ride out flakiness.
+    """
+    last = "unknown"
+    for attempt in range(4):
+        # No param on the first try (use the warm cache); bust it on retries.
+        params = {"_nc": int(time.time() * 1000)} if attempt else None
+        try:
+            r = session.get(SEARCH_PAGE, timeout=TIMEOUT, params=params)
+            if r.status_code == 200:
+                m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
+                if m:
+                    return m.group(1)
+                last = f"200 but no nonce (bytes={len(r.text)})"
+            else:
+                last = f"status={r.status_code}"
+        except requests.RequestException as exc:
+            last = str(exc)
+        time.sleep(1.5)
+    raise RuntimeError(f"MSPCA: could not get AJAX nonce after 4 tries ({last})")
 
 
 def _bg_image(style: str) -> str:
