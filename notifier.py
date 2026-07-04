@@ -17,8 +17,10 @@ import requests
 
 from models import Pet
 
-SERVER = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
-TOPIC = os.environ.get("NTFY_TOPIC", "").strip()
+# Use `or` so an empty env var (GitHub passes unset secrets as "") still falls
+# back to the default, rather than becoming a blank server.
+SERVER = (os.environ.get("NTFY_SERVER") or "https://ntfy.sh").strip().rstrip("/")
+TOPIC = (os.environ.get("NTFY_TOPIC") or "").strip()
 
 
 def _body(pet: Pet) -> str:
