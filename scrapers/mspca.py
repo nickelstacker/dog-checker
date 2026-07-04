@@ -48,11 +48,12 @@ def _get_nonce(session: requests.Session) -> str:
                 m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
                 if m:
                     return m.group(1)
-                title = re.search(r"<title[^>]*>([^<]*)</title>", r.text, re.I)
-                snippet = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", r.text)).strip()[:200]
+                cookies = re.findall(r"document\.cookie\s*=\s*[\"']([^\"']+)", r.text)
+                setck = dict(r.cookies)
+                scripts = re.findall(r'<script[^>]+src=["\']([^"\']+)', r.text)
                 last = (f"200 no-nonce bytes={len(r.text)} "
-                        f"title={title.group(1)[:60] if title else '?'!r} "
-                        f"text={snippet!r}")
+                        f"js_cookies={cookies} resp_cookies={list(setck)} "
+                        f"scripts={scripts[:4]} raw={r.text[:900]!r}")
             else:
                 last = f"status={r.status_code}"
         except requests.RequestException as exc:
