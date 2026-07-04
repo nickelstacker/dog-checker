@@ -48,7 +48,11 @@ def _get_nonce(session: requests.Session) -> str:
                 m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
                 if m:
                     return m.group(1)
-                last = f"200 but no nonce (bytes={len(r.text)})"
+                title = re.search(r"<title[^>]*>([^<]*)</title>", r.text, re.I)
+                snippet = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", r.text)).strip()[:200]
+                last = (f"200 no-nonce bytes={len(r.text)} "
+                        f"title={title.group(1)[:60] if title else '?'!r} "
+                        f"text={snippet!r}")
             else:
                 last = f"status={r.status_code}"
         except requests.RequestException as exc:
