@@ -24,6 +24,10 @@ from util import make_session
 
 STATE_FILE = Path(__file__).with_name("seen.json")
 
+# Warn only after this many consecutive failed runs for a source (~1 hour at
+# the 20-minute cadence), so transient bot-challenges don't spam alerts.
+FAIL_ALERT_THRESHOLD = 3
+
 
 def load_state() -> dict:
     if STATE_FILE.exists():
@@ -57,8 +61,10 @@ def run(dry_run: bool = False, force_seed: bool = False) -> int:
     # a dozen notifications for dogs that were already listed.
     seeding = force_seed or not STATE_FILE.exists()
 
-    # Per-source health so a site that quietly breaks (returns 0 dogs) alerts
-    # us once, not every run. Lives under a reserved "_meta" key in the state.
+    # Per-source health, stored under a reserved "_meta" key in the state.
+    # Some sites (MSPCA) intermittently serve a bot-challenge from datacenter
+    # IPs, so we only warn after several *consecutive* failures - real breakage
+    # (a site redesign) persists; a one-off challenge clears on the next run.
     meta = state.setdefault("_meta", {})
     health = meta.setdefault("health", {})
 
@@ -71,25 +77,30 @@ def run(dry_run: bool = False, force_seed: bool = False) -> int:
             pets = mod.scrape(session)
         except Exception as exc:  # one bad site shouldn't kill the others
             pets, broken = [], str(exc)
-        # Zero listings from a normally-busy shelter almost always means its
-        # page changed and the parser needs updating.
         if broken is None and not pets:
             broken = "returned 0 dogs (the site's page may have changed)"
 
-        was_broken = health.get(mod.SOURCE) == "broken"
+        h = health.setdefault(mod.SOURCE, {"fails": 0, "alerted": False})
+        if isinstance(h, str):  # migrate from the old "ok"/"broken" format
+            h = health[mod.SOURCE] = {"fails": 0, "alerted": False}
+
         if broken:
+            h["fails"] += 1
             errors.append(f"{mod.SOURCE}: {broken}")
-            print(f"ERROR scraping {mod.SOURCE}: {broken}", file=sys.stderr)
-            if not was_broken and not dry_run:  # alert only on the transition
+            print(f"ERROR scraping {mod.SOURCE} "
+                  f"(fail #{h['fails']}): {broken}", file=sys.stderr)
+            if h["fails"] >= FAIL_ALERT_THRESHOLD and not h["alerted"] and not dry_run:
                 _safe_notify_text(
                     f"⚠️ {mod.SOURCE} scraper may be broken",
-                    f"{mod.SOURCE} returned no dogs. It likely needs a fix.\n{broken}")
-            health[mod.SOURCE] = "broken"
+                    f"{mod.SOURCE} has returned no dogs {h['fails']} runs in a "
+                    f"row. It likely needs a fix.\n{broken}")
+                h["alerted"] = True
             continue
-        if was_broken and not dry_run:  # recovered since last run
+
+        if h["alerted"] and not dry_run:  # genuinely recovered after alerting
             _safe_notify_text(f"✅ {mod.SOURCE} scraper recovered",
                               f"{mod.SOURCE} is returning dogs again ({len(pets)} listed).")
-        health[mod.SOURCE] = "ok"
+        h["fails"], h["alerted"] = 0, False
 
         print(f"{mod.SOURCE}: found {len(pets)} listed dog(s)")
         for pet in pets:

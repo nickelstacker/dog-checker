@@ -39,7 +39,7 @@ def _get_nonce(session: requests.Session) -> str:
     forces a fresh render, and we retry a few times to ride out flakiness.
     """
     last = "unknown"
-    for attempt in range(4):
+    for attempt in range(5):
         # No param on the first try (use the warm cache); bust it on retries.
         params = {"_nc": int(time.time() * 1000)} if attempt else None
         try:
@@ -48,18 +48,17 @@ def _get_nonce(session: requests.Session) -> str:
                 m = re.search(r'"nonce":"([a-z0-9]+)"', r.text, re.I)
                 if m:
                     return m.group(1)
-                cookies = re.findall(r"document\.cookie\s*=\s*[\"']([^\"']+)", r.text)
-                setck = dict(r.cookies)
-                scripts = re.findall(r'<script[^>]+src=["\']([^"\']+)', r.text)
-                last = (f"200 no-nonce bytes={len(r.text)} "
-                        f"js_cookies={cookies} resp_cookies={list(setck)} "
-                        f"scripts={scripts[:4]} raw={r.text[:900]!r}")
+                # MSPCA's DDoS protection sometimes serves a JS "One moment,
+                # please..." challenge to datacenter IPs. It's rate-based, so
+                # backing off and retrying usually clears it.
+                title = re.search(r"<title[^>]*>([^<]*)</title>", r.text, re.I)
+                last = f"challenge page ({title.group(1)[:40] if title else '?'})"
             else:
                 last = f"status={r.status_code}"
         except requests.RequestException as exc:
             last = str(exc)
-        time.sleep(1.5)
-    raise RuntimeError(f"MSPCA: could not get AJAX nonce after 4 tries ({last})")
+        time.sleep(3 * (attempt + 1))  # 3s, 6s, 9s, 12s
+    raise RuntimeError(f"MSPCA: could not get AJAX nonce after 5 tries ({last})")
 
 
 def _bg_image(style: str) -> str:
