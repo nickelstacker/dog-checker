@@ -1,9 +1,18 @@
 {
   "_meta": {
     "health": {
-      "ARL Boston": "ok",
-      "MSPCA": "ok",
-      "Worcester ARL": "ok"
+      "ARL Boston": {
+        "alerted": false,
+        "fails": 0
+      },
+      "MSPCA": {
+        "alerted": false,
+        "fails": 0
+      },
+      "Worcester ARL": {
+        "alerted": false,
+        "fails": 0
+      }
     }
   },
   "arlboston:A282786": {
