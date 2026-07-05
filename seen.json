@@ -7,7 +7,7 @@
       },
       "MSPCA": {
         "alerted": false,
-        "fails": 1
+        "fails": 0
       },
       "Worcester ARL": {
         "alerted": false,
@@ -364,6 +364,13 @@
     "source": "MSPCA",
     "url": "https://www.mspca.org/pets/a473048/",
     "weight_lb": null
+  },
+  "mspca:a473050": {
+    "first_seen": "2026-07-05T22:45:39+00:00",
+    "name": "Berkeley",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473050/",
+    "weight_lb": 46.74
   },
   "mspca:a473075": {
     "first_seen": "2026-07-03T15:23:48+00:00",
