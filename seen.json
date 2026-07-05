@@ -7,7 +7,7 @@
       },
       "MSPCA": {
         "alerted": false,
-        "fails": 1
+        "fails": 0
       },
       "Worcester ARL": {
         "alerted": false,
@@ -301,6 +301,13 @@
     "source": "MSPCA",
     "url": "https://www.mspca.org/pets/a472253/",
     "weight_lb": null
+  },
+  "mspca:a472862": {
+    "first_seen": "2026-07-05T20:44:07+00:00",
+    "name": "Betty",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a472862/",
+    "weight_lb": 29.54
   },
   "mspca:a472876": {
     "first_seen": "2026-07-03T15:23:48+00:00",
