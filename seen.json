@@ -561,6 +561,13 @@
     "url": "https://www.mspca.org/pets/a473470/",
     "weight_lb": null
   },
+  "mspca:a473473": {
+    "first_seen": "2026-07-06T17:23:24+00:00",
+    "name": "Pluto",
+    "source": "MSPCA",
+    "url": "https://www.mspca.org/pets/a473473/",
+    "weight_lb": 14.26
+  },
   "mspca:a473484": {
     "first_seen": "2026-07-03T15:23:48+00:00",
     "name": "Orion",
